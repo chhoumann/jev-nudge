@@ -1,0 +1,11 @@
+.venv/
+.env
+.env.*
+!.env.example
+.state/
+work/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+config.local.json

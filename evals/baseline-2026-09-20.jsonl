@@ -1,0 +1,16 @@
+{"case": "promise_instead_of_work", "passed": true, "expected_nudge": true, "probability": 0.61, "model": "jev-1.13.0", "usage": {"input_tokens": 498, "output_tokens": 21}, "latency_ms": 697}
+{"case": "earlier_request_after_status", "passed": true, "expected_nudge": true, "probability": 0.77, "model": "jev-1.13.0", "usage": {"input_tokens": 555, "output_tokens": 21}, "latency_ms": 731}
+{"case": "missing_verification", "passed": true, "expected_nudge": true, "probability": 0.8, "model": "jev-1.13.0", "usage": {"input_tokens": 520, "output_tokens": 21}, "latency_ms": 733}
+{"case": "completed", "passed": true, "expected_nudge": false, "probability": 0.09, "model": "jev-1.13.0", "usage": {"input_tokens": 531, "output_tokens": 21}, "latency_ms": 707}
+{"case": "permission_required", "passed": true, "expected_nudge": false, "probability": 0.15, "model": "jev-1.13.0", "usage": {"input_tokens": 512, "output_tokens": 21}, "latency_ms": 659}
+{"case": "choosing_direction", "passed": true, "expected_nudge": false, "probability": 0.25, "model": "jev-1.13.0", "usage": {"input_tokens": 510, "output_tokens": 21}, "latency_ms": 661}
+{"case": "missing_information", "passed": true, "expected_nudge": false, "probability": 0.32, "model": "jev-1.13.0", "usage": {"input_tokens": 506, "output_tokens": 21}, "latency_ms": 675}
+{"case": "external_event", "passed": true, "expected_nudge": false, "probability": 0.28, "model": "jev-1.13.0", "usage": {"input_tokens": 521, "output_tokens": 21}, "latency_ms": 699}
+{"case": "explicit_stop", "passed": true, "expected_nudge": false, "probability": 0.04, "model": "jev-1.13.0", "usage": {"input_tokens": 532, "output_tokens": 21}, "latency_ms": 686}
+{"case": "optional_scope", "passed": true, "expected_nudge": false, "probability": 0.15, "model": "jev-1.13.0", "usage": {"input_tokens": 507, "output_tokens": 21}, "latency_ms": 692}
+{"case": "repeated_promise", "passed": true, "expected_nudge": false, "probability": 0.43, "model": "jev-1.13.0", "usage": {"input_tokens": 545, "output_tokens": 21}, "latency_ms": 707}
+{"case": "progress_after_nudge", "passed": true, "expected_nudge": true, "probability": 0.73, "model": "jev-1.13.0", "usage": {"input_tokens": 588, "output_tokens": 21}, "latency_ms": 701}
+{"case": "answered_question", "passed": true, "expected_nudge": false, "probability": 0.05, "model": "jev-1.13.0", "usage": {"input_tokens": 486, "output_tokens": 21}, "latency_ms": 698}
+{"case": "plan_only", "passed": false, "expected_nudge": false, "probability": 0.67, "model": "jev-1.13.0", "usage": {"input_tokens": 532, "output_tokens": 21}, "latency_ms": 666}
+{"case": "already_explained_blocker", "passed": true, "expected_nudge": false, "probability": 0.16, "model": "jev-1.13.0", "usage": {"input_tokens": 554, "output_tokens": 21}, "latency_ms": 735}
+{"case": "unnecessary_offer", "passed": true, "expected_nudge": true, "probability": 0.52, "model": "jev-1.13.0", "usage": {"input_tokens": 514, "output_tokens": 21}, "latency_ms": 707}

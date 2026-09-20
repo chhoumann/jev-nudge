@@ -1,0 +1,9 @@
+{
+  "model": "jev-1.13.0",
+  "threshold": 0.5,
+  "max_nudges": 3,
+  "timeout_seconds": 8,
+  "enabled": true,
+  "env_file": ".env",
+  "state_dir": ".state"
+}

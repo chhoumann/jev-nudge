@@ -1,0 +1,162 @@
+[
+  {
+    "name": "review_only",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Review the patch and tell me the issues. Do not change any code."
+        },
+        {
+          "role": "assistant",
+          "text": "Found two issues: a null dereference and missing validation. Here are the file locations and fixes."
+        }
+      ],
+      "last_assistant_message": "Found two issues: a null dereference and missing validation. Here are the file locations and fixes."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "danish_pause",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Ret fejlen og test den."
+        },
+        {
+          "role": "assistant",
+          "text": "Jeg har fundet \u00e5rsagen."
+        },
+        {
+          "role": "user",
+          "text": "Vent, stop her. Jeg vender tilbage senere."
+        },
+        {
+          "role": "assistant",
+          "text": "Jeg stopper her."
+        }
+      ],
+      "last_assistant_message": "Jeg stopper her."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "approved_next_step",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Implement a working JSON parser and test it."
+        },
+        {
+          "role": "assistant",
+          "text": "I have finished the tokenizer. The parser is still missing. I will build that next."
+        }
+      ],
+      "last_assistant_message": "I have finished the tokenizer. The parser is still missing. I will build that next."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "authorization_not_granted",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Investigate the outage. Do not restart production."
+        },
+        {
+          "role": "assistant",
+          "text": "A restart is required to recover. I need your approval before restarting."
+        }
+      ],
+      "last_assistant_message": "A restart is required to recover. I need your approval before restarting."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "cancelled_old_task",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Build the API endpoint."
+        },
+        {
+          "role": "user",
+          "text": "Cancel that. Just explain how HTTP caching works."
+        },
+        {
+          "role": "assistant",
+          "text": "HTTP caches reuse responses according to Cache-Control freshness and validators such as ETag. Stale responses can be revalidated with If-None-Match."
+        }
+      ],
+      "last_assistant_message": "HTTP caches reuse responses according to Cache-Control freshness and validators such as ETag. Stale responses can be revalidated with If-None-Match."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "question_during_work",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Fix the CSV download bug and add proper quoting."
+        },
+        {
+          "role": "assistant",
+          "text": "Investigating the handler."
+        },
+        {
+          "role": "user",
+          "text": "Will this affect JSON export?"
+        },
+        {
+          "role": "assistant",
+          "text": "No, JSON uses a separate serializer. I will now implement the CSV fix."
+        }
+      ],
+      "last_assistant_message": "No, JSON uses a separate serializer. I will now implement the CSV fix."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "implementation_done",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Add a --json flag and verify it."
+        },
+        {
+          "role": "tool_result",
+          "text": "Tests: 8 passed. cli --json returned valid JSON."
+        },
+        {
+          "role": "assistant",
+          "text": "Added --json, verified real CLI output, and all 8 tests pass."
+        }
+      ],
+      "last_assistant_message": "Added --json, verified real CLI output, and all 8 tests pass."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "waiting_for_upload",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Summarize the spreadsheet I am about to upload."
+        },
+        {
+          "role": "assistant",
+          "text": "Please upload the spreadsheet so I can read it."
+        }
+      ],
+      "last_assistant_message": "Please upload the spreadsheet so I can read it."
+    },
+    "expected_nudge": false
+  }
+]

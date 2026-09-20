@@ -1,0 +1,322 @@
+[
+  {
+    "name": "promise_instead_of_work",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Implement CSV export and verify the downloaded file."
+        },
+        {
+          "role": "assistant",
+          "text": "I'll implement CSV export next."
+        }
+      ],
+      "last_assistant_message": "I'll implement CSV export next."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "earlier_request_after_status",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Fix the bug, run tests, and commit it."
+        },
+        {
+          "role": "assistant",
+          "text": "I found the broken handler."
+        },
+        {
+          "role": "user",
+          "text": "What was the cause?"
+        },
+        {
+          "role": "assistant",
+          "text": "The handler drops the ID. I'll fix it next."
+        }
+      ],
+      "last_assistant_message": "The handler drops the ID. I'll fix it next."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "missing_verification",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Implement the fix and run the test suite."
+        },
+        {
+          "role": "assistant",
+          "text": "The fix is implemented. I have not run tests yet; that is the next step."
+        }
+      ],
+      "last_assistant_message": "The fix is implemented. I have not run tests yet; that is the next step."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "completed",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Create result.txt containing done and verify it."
+        },
+        {
+          "role": "tool_result",
+          "text": "Wrote result.txt. Read back: done"
+        },
+        {
+          "role": "assistant",
+          "text": "Created result.txt and verified its contents are done."
+        }
+      ],
+      "last_assistant_message": "Created result.txt and verified its contents are done."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "permission_required",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Prepare the deployment, but ask before deploying."
+        },
+        {
+          "role": "assistant",
+          "text": "The release is built and tested. May I deploy it to production?"
+        }
+      ],
+      "last_assistant_message": "The release is built and tested. May I deploy it to production?"
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "choosing_direction",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Show me two approaches before implementing."
+        },
+        {
+          "role": "assistant",
+          "text": "A uses a file, B uses SQLite. Which do you prefer?"
+        }
+      ],
+      "last_assistant_message": "A uses a file, B uses SQLite. Which do you prefer?"
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "missing_information",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Send the invoice to the client."
+        },
+        {
+          "role": "assistant",
+          "text": "I need the client email address and invoice file to proceed."
+        }
+      ],
+      "last_assistant_message": "I need the client email address and invoice file to proceed."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "external_event",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Check whether the DNS change has propagated."
+        },
+        {
+          "role": "assistant",
+          "text": "The change is configured correctly but propagation is pending. We need to wait for the DNS TTL."
+        }
+      ],
+      "last_assistant_message": "The change is configured correctly but propagation is pending. We need to wait for the DNS TTL."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "explicit_stop",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Build an export feature."
+        },
+        {
+          "role": "assistant",
+          "text": "The endpoint is ready."
+        },
+        {
+          "role": "user",
+          "text": "Stop now. I will finish it myself."
+        },
+        {
+          "role": "assistant",
+          "text": "Stopped."
+        }
+      ],
+      "last_assistant_message": "Stopped."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "optional_scope",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Fix this typo."
+        },
+        {
+          "role": "assistant",
+          "text": "Fixed the typo. I can also redesign this page if you want."
+        }
+      ],
+      "last_assistant_message": "Fixed the typo. I can also redesign this page if you want."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "repeated_promise",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Create report.csv."
+        },
+        {
+          "role": "assistant",
+          "text": "I'll create report.csv next."
+        },
+        {
+          "role": "user",
+          "text": "Jev Nudge: Continue useful authorized unfinished work."
+        },
+        {
+          "role": "assistant",
+          "text": "I'll create report.csv next."
+        }
+      ],
+      "last_assistant_message": "I'll create report.csv next."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "progress_after_nudge",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Create report.csv and verify it."
+        },
+        {
+          "role": "assistant",
+          "text": "I'll create it next."
+        },
+        {
+          "role": "user",
+          "text": "Jev Nudge: Continue useful authorized unfinished work."
+        },
+        {
+          "role": "tool_result",
+          "text": "report.csv created with 100 rows"
+        },
+        {
+          "role": "assistant",
+          "text": "Created report.csv. Next I will validate its headers and row count."
+        }
+      ],
+      "last_assistant_message": "Created report.csv. Next I will validate its headers and row count."
+    },
+    "expected_nudge": true
+  },
+  {
+    "name": "answered_question",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "What is 2+2?"
+        },
+        {
+          "role": "assistant",
+          "text": "4."
+        }
+      ],
+      "last_assistant_message": "4."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "plan_only",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Give me a plan for this migration. Do not implement yet."
+        },
+        {
+          "role": "assistant",
+          "text": "1. Backup. 2. Migrate. 3. Verify. 4. Roll out."
+        }
+      ],
+      "last_assistant_message": "1. Backup. 2. Migrate. 3. Verify. 4. Roll out."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "already_explained_blocker",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Run the tests."
+        },
+        {
+          "role": "assistant",
+          "text": "The package registry is down and dependencies are missing."
+        },
+        {
+          "role": "user",
+          "text": "Jev Nudge: Continue useful authorized unfinished work."
+        },
+        {
+          "role": "assistant",
+          "text": "Registry is still down; I cannot install dependencies."
+        }
+      ],
+      "last_assistant_message": "Registry is still down; I cannot install dependencies."
+    },
+    "expected_nudge": false
+  },
+  {
+    "name": "unnecessary_offer",
+    "state": {
+      "recent_messages": [
+        {
+          "role": "user",
+          "text": "Please fix the failing test and run it."
+        },
+        {
+          "role": "assistant",
+          "text": "I found the root cause. Would you like me to apply the fix?"
+        }
+      ],
+      "last_assistant_message": "I found the root cause. Would you like me to apply the fix?"
+    },
+    "expected_nudge": true
+  }
+]

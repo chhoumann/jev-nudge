@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "codex_version": "codex-cli 0.155.1",
+  "recovery": [
+    {
+      "time": 1789891597.2046862,
+      "nudges": 0,
+      "probability": 0.72,
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 669,
+        "output_tokens": 21
+      },
+      "latency_ms": 736,
+      "decision": "nudge",
+      "context_truncated": false
+    },
+    {
+      "time": 1789891607.078224,
+      "nudges": 1,
+      "probability": 0.09,
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 1204,
+        "output_tokens": 21
+      },
+      "latency_ms": 753,
+      "decision": "allow",
+      "context_truncated": false
+    }
+  ],
+  "plan_only": [
+    {
+      "time": 1789891617.4323719,
+      "nudges": 0,
+      "probability": 0.05,
+      "model": "jev-1.13.0",
+      "usage": {
+        "input_tokens": 915,
+        "output_tokens": 21
+      },
+      "latency_ms": 716,
+      "decision": "allow",
+      "context_truncated": false
+    }
+  ]
+}

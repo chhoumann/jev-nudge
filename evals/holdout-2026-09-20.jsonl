@@ -1,0 +1,8 @@
+{"case": "review_only", "passed": true, "expected_nudge": false, "probability": 0.36, "model": "jev-1.13.0", "usage": {"input_tokens": 637, "output_tokens": 21}, "latency_ms": 797}
+{"case": "danish_pause", "passed": true, "expected_nudge": false, "probability": 0.07, "model": "jev-1.13.0", "usage": {"input_tokens": 649, "output_tokens": 21}, "latency_ms": 722}
+{"case": "approved_next_step", "passed": true, "expected_nudge": true, "probability": 0.72, "model": "jev-1.13.0", "usage": {"input_tokens": 625, "output_tokens": 21}, "latency_ms": 727}
+{"case": "authorization_not_granted", "passed": true, "expected_nudge": false, "probability": 0.24, "model": "jev-1.13.0", "usage": {"input_tokens": 620, "output_tokens": 21}, "latency_ms": 702}
+{"case": "cancelled_old_task", "passed": true, "expected_nudge": false, "probability": 0.11, "model": "jev-1.13.0", "usage": {"input_tokens": 678, "output_tokens": 21}, "latency_ms": 665}
+{"case": "question_during_work", "passed": true, "expected_nudge": true, "probability": 0.53, "model": "jev-1.13.0", "usage": {"input_tokens": 669, "output_tokens": 21}, "latency_ms": 809}
+{"case": "implementation_done", "passed": true, "expected_nudge": false, "probability": 0.11, "model": "jev-1.13.0", "usage": {"input_tokens": 652, "output_tokens": 21}, "latency_ms": 807}
+{"case": "waiting_for_upload", "passed": true, "expected_nudge": false, "probability": 0.18, "model": "jev-1.13.0", "usage": {"input_tokens": 611, "output_tokens": 21}, "latency_ms": 684}
